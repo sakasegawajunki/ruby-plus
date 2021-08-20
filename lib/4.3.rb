@@ -18,3 +18,8 @@ numbers.each do |n|
   sum += sum_value
 end
 puts sum
+
+numbers = [1,2,3,4]
+sum = 0
+numbers.each do |n| sum += n end
+puts sum
