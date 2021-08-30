@@ -96,6 +96,32 @@ class User
 end
 user = User.new
 # p user.foo
-# p user.bar
+# p user.bare
 # p user.baz
 
+class User
+  attr_reader :name
+  
+  def initialize(name, weight)
+    @name = name
+    @weight = weight
+  end
+  
+  def heavier_than?(other_user)
+    other_user.weight < @weight
+  end
+  
+  protected
+  
+  def weightassd
+    @weight
+  end
+end 
+
+alice = User.new("Alice", 70)
+bob = User.new("Bob", 60)
+
+
+p alice.heavier_than?(bob)
+p bob.heavier_than?(alice)
+p alice.weight
